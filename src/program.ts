@@ -1316,7 +1316,7 @@ export class Function extends Element {
       case NativeType.F64: temps = this.tempF64s || (this.tempF64s = []); break;
       default: throw new Error("unexpected type");
     }
-    temps.push(local);
+    // temps.push(local);
   }
 
   /** Gets and immediately frees a temporary local of the specified type. */
@@ -1332,7 +1332,7 @@ export class Function extends Element {
     if (temps.length > 0)
       return temps[temps.length - 1];
     let local: Local = this.addLocal(type);
-    temps.push(local);
+    // temps.push(local);
     return local;
   }
 
