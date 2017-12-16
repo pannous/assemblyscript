@@ -16,14 +16,12 @@
   (loop $continue|0
    (if
     (if (result i32)
-     (tee_local $3
-      (get_local $2)
-     )
+     (get_local $2)
      (i32.rem_u
       (get_local $1)
       (i32.const 4)
      )
-     (get_local $3)
+     (get_local $2)
     )
     (block
      (set_local $4
