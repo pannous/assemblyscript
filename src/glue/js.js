@@ -5,7 +5,7 @@ var globalScope = typeof window !== "undefined" && window || typeof global !== "
 var binaryen = globalScope["Binaryen"]; // allow overriding for testing purposes
 if (!binaryen) {
   try {
-    binaryen = require("../../lib/binaryen-merge-locals");
+    binaryen = require("binaryen");
   } catch (e) {
     binaryen = globalScope["Binaryen"];
   }
